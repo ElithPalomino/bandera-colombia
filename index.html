@@ -21,7 +21,7 @@
 <meta name="twitter:description" content="¿Cuánto amarillo lleva la bandera de Colombia? Ajusta la franja y mide tu precisión.">
 <meta name="twitter:image" content="https://bandera-colombia.vercel.app/og.png">
 <meta name="twitter:image:alt" content="Ajusta el amarillo: una bandera de Colombia con una línea para ajustar dónde termina la franja amarilla.">
-<meta name="theme-color" content="#003893">
+<meta name="theme-color" content="#FCD116">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='10' fill='%23FCD116'/%3E%3Crect y='10' width='30' height='5' fill='%23003893'/%3E%3Crect y='15' width='30' height='5' fill='%23CE1126'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-text-size-adjust: 100%; }
   body {
-    background: var(--blue);
+    background: var(--yellow);
     color: var(--ink);
     font-family: var(--wide);
     overflow-x: hidden;
@@ -458,7 +458,7 @@
     const W = 1080, H = 1350, c = document.createElement("canvas");
     c.width = W; c.height = H;
     const g = c.getContext("2d");
-    g.fillStyle = "#003893"; g.fillRect(0, 0, W, H);
+    g.fillStyle = "#FCD116"; g.fillRect(0, 0, W, H);
     g.fillStyle = "#fff"; g.fillRect(40, 0, W - 80, H);
     // flag with the player's guess
     const fx = 100, fy = 330, fw = 880, fh = 587;
