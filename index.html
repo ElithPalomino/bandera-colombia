@@ -153,7 +153,6 @@
     display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
     font-size: 14px; color: var(--muted);
   }
-  .readout strong { color: var(--ink); font-family: var(--display); font-weight: 400; font-size: 28px; letter-spacing: .01em; }
 
   /* Panel */
   .panel {
@@ -264,7 +263,6 @@
         </div>
         <div class="readout">
           <span>Arrastra la línea o usa ↑ ↓</span>
-          <span>Amarillo: <strong id="live">—</strong></span>
         </div>
       </div>
 
@@ -369,7 +367,6 @@
     sR.style.height = rest / 2 * 100 + "%";
     handle.style.top = val * 100 + "%";
     handle.setAttribute("aria-valuenow", Math.round(val * 100));
-    $("live").textContent = state === "idle" ? "—" : fmt(val * 100, 1) + "%";
   }
   function renderBest() { $("best").textContent = best ? fmt(best) + "%" : "—"; }
 
@@ -456,7 +453,7 @@
     if (score >= 92) confetti();
 
     // animate stripes to the true proportions after a beat
-    setTimeout(() => { flag.classList.add("anim"); const keep = y; paint(TRUE_Y); y = keep; $("live").textContent = "50,0%"; }, 900);
+    setTimeout(() => { flag.classList.add("anim"); const keep = y; paint(TRUE_Y); y = keep; }, 900);
   }
 
   function countUp(target) {
