@@ -257,8 +257,7 @@
         <div><dt>Tu récord</dt><dd id="best">—</dd></div>
       </dl>
       <div class="grid2 first">
-        <button class="share" id="shareX">Compartir en X <span>↗</span></button>
-        <button class="share" id="shareWa">WhatsApp <span>↗</span></button>
+        <button class="share" id="shareX" style="grid-column: 1 / -1">Compartir en X <span>↗</span></button>
       </div>
       <div class="grid2">
         <button class="btn small ghostbtn" id="saveBtn">Guardar <span class="arr">↓</span></button>
@@ -453,7 +452,6 @@
   // ---------- share / save ----------
   const shareText = () => `Ajusté el amarillo de la bandera de Colombia con ${fmt(lastScore)}% de precisión 🇨🇴 ¿Cuánto sacas tú?`;
   $("shareX").onclick = () => window.open("https://x.com/intent/post?text=" + encodeURIComponent(shareText()) + "&url=" + encodeURIComponent(location.href), "_blank", "noopener");
-  $("shareWa").onclick = () => window.open("https://wa.me/?text=" + encodeURIComponent(shareText() + " " + location.href), "_blank", "noopener");
 
   $("saveBtn").onclick = () => {
     const W = 1080, H = 1350, c = document.createElement("canvas");
