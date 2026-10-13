@@ -38,7 +38,7 @@
   /* Top bar */
   .bar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 14px 24px;
+    padding: 14px max(24px, calc((100% - 552px) / 2));
     border-bottom: 2px solid var(--line);
     font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
   }
@@ -50,13 +50,13 @@
   .sound { text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
   .sound b { display: inline-block; min-width: 2.2em; text-align: left; }
 
-  main { max-width: 1180px; margin: 0 auto; padding: 32px 24px 64px; }
+  main { max-width: 600px; margin: 0 auto; padding: 32px 24px 64px; }
 
   /* Hero */
   .hero h1 {
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(64px, 14vw, 180px);
+    font-size: clamp(52px, 16vw, 76px);
     line-height: .86;
     letter-spacing: -.01em;
     text-transform: uppercase;
@@ -67,18 +67,17 @@
   }
   .hero p {
     margin-top: 18px; max-width: 34ch;
-    font-size: clamp(17px, 2vw, 21px); line-height: 1.35;
+    font-size: 18px; line-height: 1.35;
   }
 
   /* Game grid */
   .game {
     margin-top: 36px;
     display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: 32px;
     align-items: start;
   }
-  @media (max-width: 860px) { .game { grid-template-columns: 1fr; } }
 
   .stage { position: relative; }
   .flag {
@@ -166,7 +165,7 @@
   }
   .score {
     font-family: var(--display); font-weight: 400;
-    font-size: clamp(64px, 9vw, 104px); line-height: 1;
+    font-size: 72px; line-height: 1;
     margin: 10px 0 6px;
     font-variant-numeric: tabular-nums;
   }
@@ -200,23 +199,18 @@
   /* Fact strip */
   .facts {
     margin-top: 72px;
-    display: grid; grid-template-columns: repeat(3, 1fr);
+    display: grid; grid-template-columns: 1fr;
     border: 2px solid var(--ink);
   }
-  .facts article { padding: 22px; border-right: 2px solid var(--ink); background: #fff; }
-  .facts article:last-child { border-right: 0; }
+  .facts article { padding: 22px; border-bottom: 2px solid var(--ink); background: #fff; }
+  .facts article:last-child { border-bottom: 0; }
   .facts .sw { width: 40px; height: 12px; border: 1.5px solid var(--ink); margin-bottom: 14px; }
   .facts h3 { font-family: var(--display); font-weight: 400; font-size: 30px; text-transform: uppercase; letter-spacing: .01em; }
   .facts p { margin-top: 6px; color: var(--muted); line-height: 1.45; font-size: 15px; }
-  @media (max-width: 760px) {
-    .facts { grid-template-columns: 1fr; }
-    .facts article { border-right: 0; border-bottom: 2px solid var(--ink); }
-    .facts article:last-child { border-bottom: 0; }
-  }
 
   footer {
     border-top: 2px solid var(--ink);
-    padding: 22px 24px;
+    padding: 22px max(24px, calc((100% - 552px) / 2));
     display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     font-size: 13px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700;
   }
@@ -294,18 +288,18 @@
     <section class="facts" aria-label="Datos de la bandera">
       <article>
         <div class="sw" style="background:var(--yellow)"></div>
-        <h3>Amarillo · 1/2</h3>
-        <p>Ocupa la mitad superior. Representa la riqueza del suelo, el oro y la soberanía.</p>
+        <h3>Amarillo</h3>
+        <p>Representa la riqueza del suelo, el oro y la soberanía.</p>
       </article>
       <article>
         <div class="sw" style="background:var(--blue)"></div>
-        <h3>Azul · 1/4</h3>
+        <h3>Azul</h3>
         <p>Los dos océanos que bañan el país, el Pacífico y el Atlántico (Caribe), y los ríos.</p>
       </article>
       <article>
         <div class="sw" style="background:var(--red)"></div>
-        <h3>Rojo · 1/4</h3>
-        <p>La sangre derramada por la independencia. Proporción oficial 2:1:1, Decreto 861 de 1924.</p>
+        <h3>Rojo</h3>
+        <p>La sangre derramada por la independencia.</p>
       </article>
     </section>
   </main>
